@@ -1,0 +1,75 @@
+/* Basic styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    padding: 0px;
+    margin: 10px;
+}
+
+h1 {
+    text-align: center;
+    background-color: #585858;
+    color: azure;
+    padding: 20px;
+    
+}
+
+.nav {
+    list-style: circle;
+    display: flex;
+    justify-content: center;
+    background-color: #c2c2c2;
+    padding:15px;
+    margin-top: 20px;
+}
+
+.nav li {
+    margin: 0 20px;
+    
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #5ba8d4;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #9b0707;
+}
+
+form {
+    margin-top: 20px;
+    text-align: center;
+}
+
+label {
+    display: flex;
+    width: 120px;
+    text-align: right;
+    margin-right: 10px;
+}
+
+input[type="text"], input[type="number"] {
+    width: 200px;
+}
+
+select {
+    width: 210px;
+}
+
+button {
+    margin-top: 10px;
+}
+
+a {
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+}
