@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Purchase</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename ='css/add_purchase.css')}}">
+</head>
+<body>
+    <h1>Add Purchase</h1>
+    <form method="POST">
+        <label for="item">Select Item:</label>
+        <select name="item" required>
+            <option value="item" disabled selected>Select an item</option>
+            <!-- Use Jinja2 templating to populate options from backend -->
+         <!-- <option value="item">item id</option> -->
+         <option value ="Pen">Pen</option>
+         <option value ="Pen">Pencil</option>
+         <option value ="Pen">Eraser</option>
+         <option value ="Pen">Geometry box</option>
+        </select><br>
+        <label for="qty">Quantity:</label>
+        <input type="number" name="qty" required><br>
+        <label for="rate">Rate:</label>
+        <input type="number" name="rate" step="0.01" required><br>
+        <button type="submit">Add Purchase</button>
+    </form>
+    <a href="{{ url_for('view_purchases')}}">View Purchases</a>
+</body>
+</html>

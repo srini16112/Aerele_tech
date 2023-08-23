@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Items</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename ='css/view_item.css')}}">
+</head>
+<body>
+    <h1>View Items</h1>
+    <table>
+        <tr>
+            <th>Item ID</th>
+            <th>Item Name</th>
+            <th>Quantity</th>
+        </tr>
+        <!-- Sample data (replace with dynamic data) -->
+        <tr>
+            <td>1</td>
+            <td>Pen</td>
+            <td>100</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Pencil</td>
+            <td>50</td>
+        </tr>
+        <!-- Repeat for other items -->
+    </table>
+    <a href="{{ url_for('add_item')}}">Add Item</a>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add/Edit Item</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename ='css/add_item.css')}}">
+</head>
+<body>
+    <h1>Add/Edit Item</h1>
+    <form method="POST">
+        <label for="item_name">ItemName:</label>
+        <input type="text" name="item_name" required>
+        <button type="submit">Add Item</button>
+    </form>
+    <a href="{{ url_for('view_item')}}">View Items</a>
+</body>
+</html>

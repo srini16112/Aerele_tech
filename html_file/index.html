@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Purchase/Sales Management</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename ='css/index.css')}}">
+</head>
+<body>
+    <h1>Purchase/Sales Management Web Application</h1>
+    <ul class="nav">
+        <li><a href="{{ url_for('add_item')}}">Add Item</a></li>
+        <li><a href="{{ url_for('view_item')}}">View Item</a></li>
+        <li><a href="{{ url_for('add_purchases')}}">Add Purchase</a></li>
+        <li><a href="{{ url_for('view_purchases')}}">View Purchase</a></li>
+        <li><a href="{{ url_for('add_sales')}}">Add Sales</a></li>
+        <li><a href="{{ url_for('view_sales')}}">View Sales</a></li>
+        <li><a href="{{ url_for('cash_balance')}}">Show Cash Balance</a></li>
+        
+    </ul>
+</body>
+</html>

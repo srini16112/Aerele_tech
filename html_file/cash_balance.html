@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cash Balance</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename ='css/cash_balance.css')}}">
+</head>
+<body>
+    <h1>Cash Balance</h1>
+    <p id="current-balance">Current Cash Balance: Rs.1000</p>
+    <form id="add-cash-form">
+        <label for="add-amount">Add Amount:</label>
+        <input type="number" id="add-amount" step="1.00" required>
+        <button type="button" onclick="addCash()">Add Cash</button>
+    </form>
+    <form id="reduce-cash-form">
+        <label for="reduce-amount">Reduce Amount:</label>
+        <input type="number" id="reduce-amount" step="1.00" required>
+        <button type="button" onclick="reduceCash()">Reduce Cash</button>
+    </form>
+    <a href="index.html">Go back</a>
+    <script >
+        // Initialize the initial balance
+let balance = 1000;
+
+// Function to update the displayed balance
+function updateBalance() {
+    const balanceElement = document.getElementById("current-balance");
+    balanceElement.textContent = `Current Cash Balance: Rs.${balance.toFixed(2)}`;
+}
+
+// Function to add cash
+function addCash() {
+    const addAmount = parseFloat(document.getElementById("add-amount").value);
+    if (!isNaN(addAmount) && addAmount > 0) {
+        balance += addAmount;
+        updateBalance();
+    } else {
+        alert("Please enter a valid positive amount.");
+    }
+}
+
+// Function to reduce cash
+function reduceCash() {
+    const reduceAmount = parseFloat(document.getElementById("reduce-amount").value);
+    if (!isNaN(reduceAmount) && reduceAmount > 0) {
+        if (reduceAmount <= balance) {
+            balance -= reduceAmount;
+            updateBalance();
+        } else {
+            alert("Insufficient balance.");
+        }
+    } else {
+        alert("Please enter a valid positive amount.");
+    }
+}
+
+// Initial balance update
+updateBalance();
+
+    </script>
+</body>
+</html>

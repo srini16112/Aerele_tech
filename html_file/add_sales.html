@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Sale</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename ='css/add_sales.css')}}">
+</head>
+<body>
+    <h1>Add Sale</h1>
+    <form method="POST">
+        <label for="item">selectItem:</label>
+        <select name="item" required>
+            <option value="" disabled selected>Select an item</option>
+            <option value ="Pen">Pen</option>
+            <option value ="Pen">Pencil</option>
+            <option value ="Pen">Eraser</option>
+            <option value ="Pen">Geometry box</option>
+            <!-- Add dynamic options using your backend logic here -->
+        </select><br>
+        <label for="qty">Quantity:</label>
+        <input type="number" name="qty" required><br>
+        <label for="rate">Rate:</label>
+        <input type="number" name="rate" step="0.01" required><br>
+        <button type="submit">AddSale</button>
+    </form>
+    <a href="{{ url_for('view_sales')}}">View Sales</a>
+</body>
+</html>
